@@ -90,16 +90,16 @@ class _TodoAddPageState extends State<TodoAddPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('リスト追加'),
+        title: const Text('リスト追加'),
       ),
       body: Container(
         // 余白を付ける
-        padding: EdgeInsets.all(64),
+        padding: const EdgeInsets.all(64),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             // 入力されたテキストを表示
-            Text(_text, style: TextStyle(color: Colors.blue)),
+            Text(_text, style: const TextStyle(color: Colors.blue)),
             const SizedBox(height: 8),
             // テキスト入力
             TextField(
@@ -123,7 +123,7 @@ class _TodoAddPageState extends State<TodoAddPage> {
                   // "pop"の引数から前の画面にデータを渡す
                   Navigator.of(context).pop(_text);
                 },
-                child: Text('リスト追加', style: TextStyle(color: Colors.white)),
+                child: const Text('リスト追加', style: TextStyle(color: Colors.white)),
               ),
             ),
             const SizedBox(height: 8),
@@ -137,7 +137,7 @@ class _TodoAddPageState extends State<TodoAddPage> {
                   // "pop"で前の画面に戻る
                   Navigator.of(context).pop();
                 },
-                child: Text('キャンセル'),
+                child: const Text('キャンセル'),
               ),
             ),
           ],
